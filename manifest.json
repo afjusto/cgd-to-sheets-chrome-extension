@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Expenses importer",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://caixadirectaonline.cgd.pt/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  }
+}
